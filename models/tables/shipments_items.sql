@@ -1,6 +1,6 @@
 select 
-order_id, 
-shopify_line_item_id,
+si.order_id, 
+si.shopify_line_item_id,
 s.order_number, 
 s.shopify_order_number,
 sku, 
@@ -14,8 +14,8 @@ join {{ref('webhook_shipments')}} s on s.order_id = si.order_id
 UNION
 
 select 
-order_id, 
-shopify_line_item_id,
+si.order_id, 
+si.shopify_line_item_id,
 si.order_number, 
 si.shopify_order_number,
 sku, 

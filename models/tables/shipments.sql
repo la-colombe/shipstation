@@ -1,7 +1,7 @@
 select 
-order_id, 
+s.order_id, 
 shipment_id,
-ordernumber as order_number, 
+order_number, 
 shopify_order_number,
 carrier,
 service,
@@ -23,7 +23,7 @@ UNION
 select 
 order_id, 
 shipment_id,
-ordernumber as order_number, 
+s.order_number, 
 shopify_order_number,
 carrier,
 service,

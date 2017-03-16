@@ -1,0 +1,27 @@
+2017-03-16 10:37:30,509: Tracking: tracking
+2017-03-16 10:37:30,509: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109966c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109966780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109966da0>]}
+2017-03-16 10:37:30,708: Compiled 0 models, 0 data tests, 0 schema tests, 0 archives, 0 analyses
+2017-03-16 10:37:30,708: Loading dependency graph file
+2017-03-16 10:37:30,793: Connecting to redshift.
+2017-03-16 10:37:41,271: Got an error when attempting to open a postgres connection: 'timeout expired
+'
+2017-03-16 10:37:41,271: ERROR: Could not connect to the target database. Try `dbt debug` for more information.
+2017-03-16 10:37:41,272: timeout expired
+
+2017-03-16 10:39:17,512: Tracking: tracking
+2017-03-16 10:39:17,512: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ff9c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ff99e8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ff9d68>]}
+2017-03-16 10:39:18,379: Compiled 0 models, 0 data tests, 0 schema tests, 0 archives, 0 analyses
+2017-03-16 10:39:18,379: Loading dependency graph file
+2017-03-16 10:39:18,413: Connecting to redshift.
+2017-03-16 10:39:19,152: SQL: create schema if not exists "dbt_arecalde"
+2017-03-16 10:39:19,200: SQL status: CREATE SCHEMA in 0.05 seconds
+2017-03-16 10:39:19,202: SQL: select tablename as name, 'table' as type from pg_tables
+        where schemaname = 'dbt_arecalde'
+        union all
+        select viewname as name, 'view' as type from pg_views
+        where schemaname = 'dbt_arecalde'
+2017-03-16 10:39:19,386: SQL status: SELECT in 0.18 seconds
+2017-03-16 10:39:19,388: WARNING: Nothing to do. Try checking your model configs and running `dbt compile`
+2017-03-16 10:39:19,389: Done. PASS=0 ERROR=0 SKIP=0 TOTAL=0
+2017-03-16 10:39:19,391: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120d3898>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120d35c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120d3390>]}
+2017-03-16 10:39:19,714: Flushing usage events
