@@ -1,0 +1,17 @@
+name: 'shipstation'
+version: '1.0'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+target-path: "target"
+clean-targets: ["target"]
+test-paths: ["test"]
+
+models:
+  shipstation:
+      aggregates:
+          materialized: ephemeral
+      base:
+          materialized: ephemeral
+      tables:
+          materialized: ephemeral
