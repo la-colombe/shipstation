@@ -39,4 +39,4 @@ total_weight_oz,
 total_weight_lbs
 from {{ref('file_shipments')}} s
 join {{ref('file_shipments_aggregates')}} sa on sa.order_number = s.order_number
-where order_number not in (select order_number from {{ref('webhook_shipments')}})
+where s.order_number not in (select order_number from {{ref('webhook_shipments')}})
