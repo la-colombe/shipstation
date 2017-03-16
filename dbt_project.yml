@@ -14,4 +14,4 @@ models:
       base:
           materialized: ephemeral
       tables:
-          materialized: table
+          materialized: ephemeral
