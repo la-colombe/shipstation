@@ -1,3 +1,14 @@
+{{
+config({
+    "materialized" : "table",
+    "unique_key" : "shipment_id",
+    "sort" : "ship_date",
+    "post-hook" : [
+    	"grant select on table {{this}} to group non_gl_read_only"
+    	]
+    })
+}}
+
 select 
 s.order_id, 
 shipment_id,

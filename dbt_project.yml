@@ -7,6 +7,8 @@ target-path: "target"
 clean-targets: ["target"]
 test-paths: ["test"]
 
+profile: lacolombe-dtc
+
 models:
   shipstation:
       aggregates:

@@ -13,7 +13,7 @@ si.weight_lbs::decimal(16,2),
 from {{ref('webhook_shipments_items')}} si
 join {{ref('shipments')}} s on s.order_id = si.order_id
 
-UNION
+UNION ALL
 
 select 
 si.order_id, 

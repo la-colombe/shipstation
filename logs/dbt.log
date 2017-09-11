@@ -80,3 +80,228 @@
 2017-06-08 18:23:59,477: Done. PASS=10 ERROR=0 SKIP=0 TOTAL=10
 2017-06-08 18:23:59,478: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a26710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a26860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a269e8>]}
 2017-06-08 18:23:59,583: Flushing usage events
+2017-06-08 18:34:54,867: Tracking: tracking
+2017-06-08 18:34:54,869: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107932278>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107932cf8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107932a20>]}
+2017-06-08 18:34:55,422: Loading dependency project from /usr/local/Cellar/dbt/0.8.0/libexec/lib/python3.6/site-packages/dbt/include
+2017-06-08 18:34:55,463: Loading dependency project from /Users/Andres/Documents/dbt/Sources/shipstation/dbt_modules
+2017-06-08 18:34:55,466: Parsing materializations/incremental.sql
+2017-06-08 18:34:55,486: Parsing materializations/table.sql
+2017-06-08 18:34:55,498: Parsing materializations/view.sql
+2017-06-08 18:34:55,503: Parsing materializations/wrapper.sql
+2017-06-08 18:34:55,507: Parsing schema_tests/accepted_values.sql
+2017-06-08 18:34:55,511: Parsing schema_tests/not_null.sql
+2017-06-08 18:34:55,513: Parsing schema_tests/relationships.sql
+2017-06-08 18:34:55,517: Parsing schema_tests/unique.sql
+2017-06-08 18:34:55,526: Parsing model.shipstation.file_shipments_aggregates
+2017-06-08 18:34:55,527: Parsing model.shipstation.webhook_shipments_aggregates
+2017-06-08 18:34:55,528: Parsing model.shipstation.file_shipments
+2017-06-08 18:34:55,529: Parsing model.shipstation.file_shipments_items
+2017-06-08 18:34:55,530: Parsing model.shipstation.webhook_shipments
+2017-06-08 18:34:55,531: Parsing model.shipstation.webhook_shipments_items
+2017-06-08 18:34:55,532: Parsing model.shipstation.shipments
+2017-06-08 18:34:55,536: Parsing model.shipstation.shipments_items
+2017-06-08 18:34:55,539: Parsing model.shipstation.shopify_shipments_aggregate
+2017-06-08 18:34:55,540: Parsing model.shipstation.shopify_shipments_items_aggregate
+2017-06-08 18:34:55,551: Compiled 10 models, 0 tests, 0 archives, 0 analyses, 9 macros
+2017-06-08 18:34:55,552: Acquiring new redshift connection "master".
+2017-06-08 18:34:55,553: Opening a new connection (0 currently allocated)
+2017-06-08 18:34:55,687: Using redshift connection "master".
+2017-06-08 18:34:55,688: On master: BEGIN
+2017-06-08 18:34:55,721: SQL status: BEGIN in 0.03 seconds
+2017-06-08 18:34:55,721: Creating schema "analytics_dtc".
+2017-06-08 18:34:55,721: Using redshift connection "master".
+2017-06-08 18:34:55,721: On master: create schema if not exists "analytics_dtc"
+2017-06-08 18:34:55,739: SQL status: CREATE SCHEMA in 0.02 seconds
+2017-06-08 18:34:55,739: On master: COMMIT
+2017-06-08 18:34:56,512: Concurrency: 1 threads (target='prod')
+2017-06-08 18:34:56,512: Using redshift connection "master".
+2017-06-08 18:34:56,512: On master: BEGIN
+2017-06-08 18:34:56,629: SQL status: BEGIN in 0.12 seconds
+2017-06-08 18:34:56,629: Using redshift connection "master".
+2017-06-08 18:34:56,629: On master: select tablename as name, 'table' as type from pg_tables
+        where schemaname = 'analytics_dtc'
+        union all
+        select viewname as name, 'view' as type from pg_views
+        where schemaname = 'analytics_dtc'
+2017-06-08 18:34:56,691: SQL status: SELECT in 0.06 seconds
+2017-06-08 18:34:56,692: On master: COMMIT
+2017-06-08 18:34:56,717: 
+2017-06-08 18:34:56,717: 18:34:56 | Running 9 ephemeral models, 1 table models
+2017-06-08 18:34:56,717: 18:34:56 | 
+2017-06-08 18:34:56,717: Using redshift connection "master".
+2017-06-08 18:34:56,717: On master: BEGIN
+2017-06-08 18:34:56,749: SQL status: BEGIN in 0.03 seconds
+2017-06-08 18:34:56,749: On master: COMMIT
+2017-06-08 18:34:56,766: Compiling model.shipstation.webhook_shipments_items
+2017-06-08 18:34:56,767: Compiling model.shipstation.webhook_shipments
+2017-06-08 18:34:56,768: Compiling model.shipstation.file_shipments_items
+2017-06-08 18:34:56,769: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079ffd30>]}
+2017-06-08 18:34:56,769: Compiling model.shipstation.file_shipments
+2017-06-08 18:34:56,872: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10791b898>]}
+2017-06-08 18:34:56,972: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10791b898>]}
+2017-06-08 18:34:57,072: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10791b898>]}
+2017-06-08 18:34:57,178: Compiling model.shipstation.webhook_shipments_aggregates
+2017-06-08 18:34:57,191: Compiling model.shipstation.file_shipments_aggregates
+2017-06-08 18:34:57,195: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079c1f60>]}
+2017-06-08 18:34:57,293: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079c1f60>]}
+2017-06-08 18:34:57,399: 18:34:57 | 1 of 1 START table model analytics_dtc.shipments..................... [RUN]
+2017-06-08 18:34:57,399: Compiling model.shipstation.shipments
+2017-06-08 18:34:57,417: Acquiring new redshift connection "shipments".
+2017-06-08 18:34:57,417: Opening a new connection (1 currently allocated)
+2017-06-08 18:34:57,543: Using redshift connection "shipments".
+2017-06-08 18:34:57,544: On shipments: BEGIN
+2017-06-08 18:34:57,576: SQL status: BEGIN in 0.03 seconds
+2017-06-08 18:34:57,576: Using redshift connection "shipments".
+2017-06-08 18:34:57,576: On shipments: select tablename as name, 'table' as type from pg_tables
+        where schemaname = 'analytics_dtc'
+        union all
+        select viewname as name, 'view' as type from pg_views
+        where schemaname = 'analytics_dtc'
+2017-06-08 18:34:57,620: SQL status: SELECT in 0.04 seconds
+2017-06-08 18:34:57,625: executing node model.shipstation.shipments
+2017-06-08 18:34:57,628: Using redshift connection "shipments".
+2017-06-08 18:34:57,629: On shipments: -- Compiled by DBT
+
+    
+
+    create table "analytics_dtc"."shipments__dbt_tmp"
+       compound sortkey("ship_date") as (
+        
+
+with __dbt__CTE__webhook_shipments as (
+select 
+orderid as order_id, 
+shipmentid as shipment_id,
+ordernumber as order_number, 
+'1' || split_part(ordernumber, '-',1) as shopify_order_number,
+carriercode as carrier,
+servicecode as service,
+shipdate as ship_date,
+shipmentcost as shipping_cost,
+shipto__country as ship_to_country,
+shipto__city as ship_to_city,
+shipto__state as ship_to_state,
+weight__value as weight_oz,
+round(weight__value::decimal(16,2) / 16,1) as weight_lbs
+from shipstation.webhook_shipments
+),  __dbt__CTE__webhook_shipments_items as (
+select 
+lineitemkey as shopify_line_item_id,
+_sdc_source_key_orderid as order_id, 
+upper(sku) as sku, 
+quantity,
+weight__value as weight_oz,
+round(weight__value::decimal(16,2) / 16,1) as weight_lbs
+from shipstation.webhook_shipments__shipmentitems
+),  __dbt__CTE__webhook_shipments_aggregates as (
+select order_id,
+sum(quantity) as total_quantity,
+sum(weight_oz) as total_weight_oz, 
+sum(weight_lbs) as total_weight_lbs
+from __dbt__CTE__webhook_shipments_items
+group by 1
+),  __dbt__CTE__file_shipments as (
+select 
+NULL as order_id, 
+NULL as shipment_id,
+order_number, 
+'1' || split_part(order_number, '-',1) as shopify_order_number,
+ship_to_country as ship_to_country,
+NULL as ship_to_city,
+ship_to_state as ship_to_state,
+NULL as weight_oz,
+NULL as weight_lbs,
+max(carrier) as carrier,
+max(service) as service,
+max(ship_date) as ship_date,
+sum(shipping_cost) as shipping_cost
+from file_uploads.shipstation_shipments
+group by 1,2,3,4,5,6,7,8,9
+),  __dbt__CTE__file_shipments_items as (
+select 
+NULL as order_id, 
+NULL as shopify_line_item_id,
+order_number, 
+'1' || split_part(order_number, '-',1) as shopify_order_number,
+upper(sku) as sku, 
+quantity,
+weight as weight_oz,
+round(weight::decimal(16,2) / 16,1) as weight_lbs
+from file_uploads.shipstation_shipments__items
+),  __dbt__CTE__file_shipments_aggregates as (
+select order_number, 
+sum(quantity) as total_quantity, 
+sum(weight_oz) as total_weight_oz, 
+sum(weight_lbs) as total_weight_lbs
+from __dbt__CTE__file_shipments_items
+group by 1
+)select 
+s.order_id, 
+shipment_id,
+order_number, 
+shopify_order_number,
+carrier,
+service,
+ship_date::date,
+shipping_cost,
+ship_to_country,
+ship_to_city,
+ship_to_state,
+weight_oz::decimal(16,2),
+weight_lbs::decimal(16,2),
+total_quantity,
+total_weight_oz, 
+total_weight_lbs
+from __dbt__CTE__webhook_shipments s
+join __dbt__CTE__webhook_shipments_aggregates sa on sa.order_id = s.order_id
+
+UNION
+
+select 
+order_id::bigint, 
+shipment_id::bigint,
+s.order_number, 
+shopify_order_number,
+carrier,
+service,
+ship_date::date,
+shipping_cost,
+ship_to_country,
+ship_to_city,
+ship_to_state,
+weight_oz::decimal(16,2),
+weight_lbs::decimal(16,2),
+total_quantity,
+total_weight_oz, 
+total_weight_lbs
+from __dbt__CTE__file_shipments s
+join __dbt__CTE__file_shipments_aggregates sa on sa.order_number = s.order_number
+where s.order_number not in (select order_number from __dbt__CTE__webhook_shipments)
+    );
+
+    grant select on table "analytics_dtc"."shipments__dbt_tmp" to group non_gl_read_only;
+
+    
+2017-06-08 18:35:06,513: SQL status: GRANT in 8.88 seconds
+2017-06-08 18:35:06,513: Using redshift connection "shipments".
+2017-06-08 18:35:06,513: On shipments: alter table "analytics_dtc"."shipments__dbt_tmp" rename to "shipments"
+2017-06-08 18:35:06,531: SQL status: ALTER TABLE in 0.02 seconds
+2017-06-08 18:35:06,531: On shipments: COMMIT
+2017-06-08 18:35:08,005: 18:35:08 | 1 of 1 OK created table model analytics_dtc.shipments................ [GRANT in 10.61s]
+2017-06-08 18:35:08,005: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10791b898>]}
+2017-06-08 18:35:08,111: Compiling model.shipstation.shopify_shipments_aggregate
+2017-06-08 18:35:08,112: Compiling model.shipstation.shipments_items
+2017-06-08 18:35:08,124: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079fb358>]}
+2017-06-08 18:35:08,236: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079fb358>]}
+2017-06-08 18:35:08,338: Compiling model.shipstation.shopify_shipments_items_aggregate
+2017-06-08 18:35:08,353: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9aa6b1ec-c68f-420b-bf01-f53139122daa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10791b898>]}
+2017-06-08 18:35:08,535: Using redshift connection "master".
+2017-06-08 18:35:08,535: On master: BEGIN
+2017-06-08 18:35:08,569: SQL status: BEGIN in 0.03 seconds
+2017-06-08 18:35:08,569: On master: COMMIT
+2017-06-08 18:35:08,586: 18:35:08 | 
+2017-06-08 18:35:08,587: 18:35:08 | Finished running 9 ephemeral models, 1 table models in 11.87s.
+2017-06-08 18:35:08,587: Connection 'master' was left open.
+2017-06-08 18:35:08,588: Done. PASS=10 ERROR=0 SKIP=0 TOTAL=10
+2017-06-08 18:35:08,588: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a02128>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a02710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107932278>]}
+2017-06-08 18:35:08,815: Flushing usage events
