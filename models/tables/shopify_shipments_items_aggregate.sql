@@ -6,5 +6,5 @@ sum(weight_lbs) as total_weight_lbs,
 max(carrier) as carrier,
 max(service) as service,
 min(ship_date) as first_ship_date
-from {{ref('shipments_items')}}
+from {{ref('shipment_items')}}
 group by 1
