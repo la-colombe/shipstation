@@ -20,6 +20,14 @@ shipping_cost,
 ship_to_country,
 ship_to_city,
 ship_to_state,
+warehouse_id,
+case warehouse_id
+	when 14561 then 'Tioga'
+	when 127295 then 'Michigan'
+	when 139016 then 'RLS Warehouse'
+	when 163472 then 'Frogtown'
+	else warehouse_id::char(8)
+end ship_from_warehouse,
 weight_oz::decimal(16,2),
 weight_lbs::decimal(16,2),
 total_quantity,

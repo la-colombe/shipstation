@@ -10,6 +10,7 @@ shipmentcost as shipping_cost,
 shipto__country as ship_to_country,
 shipto__city as ship_to_city,
 shipto__state as ship_to_state,
+warehouseid as warehouse_id,
 weight__value as weight_oz,
 round(weight__value::decimal(16,2) / 16,1) as weight_lbs
 from shipstation.webhook_shipments 
