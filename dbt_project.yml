@@ -11,9 +11,4 @@ profile: lacolombe-dtc
 
 models:
   shipstation:
-      aggregates:
-          materialized: ephemeral
-      base:
-          materialized: ephemeral
-      tables:
-          materialized: ephemeral
+      materialized: ephemeral
