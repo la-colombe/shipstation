@@ -13,8 +13,13 @@ order_id,
 shipment_id,
 order_number, 
 shopify_order_number,
-carrier,
+case carrier
+    when 'ups' then 'UPS'
+    when 'stamps_com' then 'USPS'
+    else carrier
+end as carrier,
 service,
+tracking_number,
 ship_date,
 shipping_cost,
 ship_to_country,
