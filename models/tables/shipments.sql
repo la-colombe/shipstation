@@ -33,6 +33,7 @@ case warehouse_id
 	when 163472 then 'Frogtown'
 	else warehouse_id::char(8)
 end ship_from_warehouse,
+voided,
 weight_oz,
 weight_lbs,
 shipping_cost / weight_lbs as shipping_cost_per_lb

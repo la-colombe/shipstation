@@ -12,6 +12,7 @@ shipto__country as ship_to_country,
 shipto__city as ship_to_city,
 shipto__state as ship_to_state,
 warehouseid as warehouse_id,
+voided,
 case weight__value
 	when 0 then null
 	else weight__value::decimal(16,2) 
