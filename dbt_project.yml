@@ -1,4 +1,6 @@
 name: 'shipstation'
+
+config-version: 2
 version: '1.0'
 
 source-paths: ["models"]
