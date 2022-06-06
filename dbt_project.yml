@@ -2,12 +2,15 @@ name: 'shipstation'
 
 config-version: 2
 version: '1.0'
+require-dbt-version: ">=1.0.0"
 
-source-paths: ["models"]
-analysis-paths: ["analysis"]
+model-paths: ["models"]
+analysis-paths: ["analyses"]
 target-path: "target"
-clean-targets: ["target"]
-test-paths: ["test"]
+clean-targets: 
+    - "target"
+    - "dbt_packages"
+test-paths: ["tests"]
 
 profile: lacolombe-dtc
 
