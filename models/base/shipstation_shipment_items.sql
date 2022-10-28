@@ -21,6 +21,6 @@ select
 	si.quantity,
 	si.weight__value::decimal(16,2) as weight_oz,
 	round(si.weight__value::decimal(16,2) / 16,1) as weight_lbs
-from shipstation.shipments__shipmentitems si
-join shipstation.shipments s on si._sdc_source_key_shipmentid = s.shipmentid
+from meltano_shipstation.shipments__shipmentitems si
+join meltano_shipstation.shipments s on si._sdc_source_key_shipmentid = s.shipmentid
 where s.createdate::date >= '2022-09-20'
