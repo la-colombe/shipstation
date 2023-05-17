@@ -6,7 +6,6 @@ require-dbt-version: ">=1.0.0"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
-target-path: "target"
 clean-targets: 
     - "target"
     - "dbt_packages"
