@@ -1,4 +1,4 @@
-{{
+ware{{
 config({
     "materialized" : "table",
     "sort" : "ship_date",
@@ -31,6 +31,7 @@ case warehouse_id
 	when 127295 then 'Michigan'
 	when 139016 then 'RLS Warehouse'
 	when 163472 then 'Frogtown'
+    when 849266 then 'Wheatsheaf'
 	else warehouse_id::char(8)
 end ship_from_warehouse,
 voided,
