@@ -1,4 +1,4 @@
-ware{{
+{{
 config({
     "materialized" : "table",
     "sort" : "ship_date",
